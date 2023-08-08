@@ -1,0 +1,203 @@
+/* Resetting some default styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DejaVu Sans Mono', monospace, 'Arial Narrow Bold', sans-serif;  
+}
+
+/* Mobile First */
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Hidden by default, will show on smaller screens */
+}
+
+.mobile-menu {
+  display: none; /* Hidden by default */
+  list-style-type: none;
+  position: absolute;
+  top: 60px; /* Adjust based on your navbar height */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .navButtonsContainer {
+      display: none; /* Hide the regular navigation */
+  }
+
+  .menu-icon {
+      display: flex; /* Show the hamburger icon */
+      flex-direction: row;
+      color: white;
+  }
+}
+
+
+/* Main Navbar Container */
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3dvh 3dvh;
+  background-color: white;
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+  border: solid, oragnered, 1px;
+}
+
+/* Logo Styling */
+.navLogoContainer {
+  position: fixed;
+  align-items: center; /* To vertically center the logo if nav buttons are taller */
+  margin-top: 10dvh;
+  margin-right: 70dvw;
+}
+
+.logoPicture {
+  max-width: 8dvw; /* You can adjust this value according to the size you want for the logo */
+  width: auto; /* Maintain the aspect ratio */
+}
+
+/* Nav Buttons Styling */
+.navButtonsContainer ul {
+  display: flex;
+  list-style: none; /* Remove bullet points from the list */
+  gap: 20px; /* Creates spacing between list items */
+}
+
+.navbutton a {
+  text-decoration: none; /* Remove underline from the links */
+  font-size: 1.5vw;
+  font-size: clamp(15px, 1.5vw, 24px);
+  color: #1A4572; /* White color for text */
+  padding: 8px 12px; /* Some padding for better appearance */
+  border-radius: 5px; /* Rounded corners for the link buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.navbutton a:hover {
+  background-color: #555; /* Darker shade for hover effect */
+}
+.mainWebpageContainer {
+  margin-top: 7dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frontPageContainer {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  width: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./Pictures/mainPageBackground.png');
+  background-size: cover;
+  background-position: center;
+  height: 80dvh;
+}
+
+.frontPageImgContainer {
+  width: 25%;
+  margin-top: 50px;
+  overflow: hidden;
+  background-size: cover; /* this will cover the entire div without stretching the image */
+  background-position: center; /* adjust as needed to focus on the right part of the image */
+}
+.frontPagePicture {
+  width: 100%;
+}
+.frontPageDescriptionHeader {
+  font-size: 1.6vw;
+  font-size: clamp(11px, 1.6vw, 48px); /* font-size will be between 24px and 40px */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  text-align: left;
+  padding-left: 4dvw;
+  padding-top: 12dvh;
+  width: 43dvw;
+  font-weight: 100;
+  text-align: center;
+}
+.frontPageDescriptionHeader p {
+  width: 70%;
+}
+.support-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70%;
+  width: clamp(320px, 70%, 1440px);
+  margin-top: 4dvh;
+}
+.mobile-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.support-icon {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icon {
+  width: 60%;
+  margin-left: 20%;
+}
+.icon-txt {
+  text-align: center;
+  font-size: 1.3vw;
+  font-size: clamp(8px, 1.3vw, 24px); /* font-size will be between 24px and 40px */
+}
+@media only screen and (max-width: 400px) {
+  .support-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .support-icon {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .mobile-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .support-icon {
+    width: 75%;
+  }
+}
+
+div {
+  /* outline: 2px pink solid; */
+  }

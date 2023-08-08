@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Services Webpage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="navContainer">
+      <div class="navLogoContainer">
+        <img class="logoPicture" src="./Pictures/DauntlessITLogo.png" alt="logo">
+      </div>
+      <div class="navButtonsContainer">
+        <ul>
+          <li class="navbutton"><a href="">IT Services</a></li>
+          <li class="navbutton"><a href="">Service Pricing</a></li>
+          <li class="navbutton"><a href="">About Us</a></li>
+          <li class="navbutton"><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mobile-nav">
+        <div class="menu-icon">
+          <div class="menu-text">Dauntless IT</div>
+          <div class="menu-selector">☰</div>
+        </div>
+        <ul class="mobile-menu">
+            <li class="navbutton"><a href="">IT Services</a></li>
+            <li class="navbutton"><a href="">Service Pricing</a></li>
+            <li class="navbutton"><a href="">About Us</a></li>
+            <li class="navbutton"><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="mainWebpageContainer">
+    <div class="frontPageContainer">
+      <!-- <div class="frontPageImgContainer">
+        <img class="frontPagePicture" src="./Pictures/DauntlessITLogo.png" alt="Colorado Mountains">
+      </div>      -->
+      <div class="frontPageDescriptionHeader">
+        <H1>A <strong>Fearless</strong> Information Technology Company</H1>
+        <p>Managing all the IT needs of your Small Business</p>
+      </div>
+    </div>
+    <div class="support-icons-container">
+      <div class="mobile-icons-container">
+        <div class="support-icon">
+          <img class="icon" src="Pictures/innovation.png" alt="logo">
+          <p class="icon-txt">Backups and smooth crisis management</p>
+        </div>
+        <div class="support-icon">
+          <img class="icon" src="Pictures/data-management.png" alt="logo">
+          <p class="icon-txt">Get your tech working for you</p>
+        </div>
+      </div>
+      <div class="mobile-icons-container">
+        <div class="support-icon">
+          <img class="icon" src="Pictures/technology.png" alt="logo">
+          <p class="icon-txt">Use cloud servers and migrations</p>
+        </div>
+        <div class="support-icon">
+          <img class="icon" src="Pictures/global.png" alt="logo">
+          <p class="icon-txt">Work closely and get to know our team</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <footer>
+    <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Technology icons created by Prosymbols Premium - Flaticon</a>
+  </footer> -->
+</body>
+<script>
+  document.querySelector('.menu-icon').addEventListener('click', function() {
+  var menu = document.querySelector('.mobile-menu');
+  if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+  } else {
+      menu.style.display = 'block';
+  }
+  });
+
+</script>
+
+</html>
