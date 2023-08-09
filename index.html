@@ -22,7 +22,6 @@
       </div>
       <div class="mobile-nav">
         <div class="menu-icon">
-          <div class="menu-text">Dauntless IT</div>
           <div class="menu-selector">☰</div>
         </div>
         <ul class="mobile-menu">
@@ -47,24 +46,69 @@
     <div class="support-icons-container">
       <div class="mobile-icons-container">
         <div class="support-icon">
-          <img class="icon" src="Pictures/innovation.png" alt="logo">
+          <img class="icon" src="./Pictures/backupIcon.png" alt="logo">
           <p class="icon-txt">Backups and smooth crisis management</p>
         </div>
         <div class="support-icon">
-          <img class="icon" src="Pictures/data-management.png" alt="logo">
+          <img class="icon" src="Pictures/FunctioningIcon.png" alt="logo">
           <p class="icon-txt">Get your tech working for you</p>
         </div>
       </div>
       <div class="mobile-icons-container">
         <div class="support-icon">
-          <img class="icon" src="Pictures/technology.png" alt="logo">
+          <img class="icon" src="Pictures/CloudServiceIcon.png" alt="logo">
           <p class="icon-txt">Use cloud servers and migrations</p>
         </div>
         <div class="support-icon">
-          <img class="icon" src="Pictures/global.png" alt="logo">
+          <img class="icon" src="Pictures/connectionsIcon.png" alt="logo">
           <p class="icon-txt">Work closely and get to know our team</p>
         </div>
       </div>
+    </div>
+    <div class="it-services">
+      <div class="it-services-header">
+        <h1>IT Support Services we Provide</h1>
+      </div>
+      <div class="it-services-body">
+        <div class="service-list">
+          <div class="service-item">
+            <button class="service-title">Service 1</button>
+            <div class="service-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nihil cumque quo tenetur tempora aperiam commodi in reprehenderit at, vitae molestias molestiae maiores atque voluptates quia minima fugit nesciunt. Eaque!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vitae dignissimos perspiciatis repellendus, explicabo deleniti nam, odit possimus nesciunt sapiente autem temporibus ab! Est necessitatibus at, quod in adipisci quia.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore minus, fugiat magnam ex distinctio omnis perferendis a aliquid, explicabo tempore officiis, laudantium beatae natus necessitatibus totam. Debitis saepe sit nesciunt.
+            </div>
+          </div>
+          <div class="service-item">
+            <button class="service-title">Service 2</button>
+            <div class="service-description">
+              Description for Service 2. This is where you can elaborate on the service provided.
+            </div>
+          </div>
+          <div class="service-item">
+            <button class="service-title">Service 3</button>
+            <div class="service-description">
+              Description for Service 3 . This is where you can elaborate on the service provided.
+            </div>
+          </div>
+          <div class="service-item">
+            <button class="service-title">Service 4</button>
+            <div class="service-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus in deleniti ipsam optio, amet, aliquid esse illo fugiat nisi animi ad natus accusantium obcaecati aperiam cupiditate. Provident, voluptatibus? Hic, fuga.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ea ipsam, itaque vitae eveniet voluptatem soluta facilis quia ratione, cum esse asperiores ipsa aspernatur dolorem quod modi suscipit iusto fuga.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sequi eaque repudiandae! Debitis, illum delectus. Aperiam iusto necessitatibus similique quam vitae! Tempora dolorem, quos ut dolor consectetur quas impedit quia?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi quae reprehenderit voluptas architecto et dolor. Rem impedit perspiciatis ad dolorem modi magnam odit voluptates, porro nam, quaerat soluta possimus.
+            </div>
+          </div>
+          <!-- Add more service items as needed -->
+        </div>
+        <div class="it-services-body-img">
+          <img class="it-support-img" src="./Pictures/ITSupport.png" alt="it support">
+        </div>
+      </div>
+    </div>
+    <div class="service-pricing">
+
     </div>
   </div>
   <!-- <footer>
@@ -80,7 +124,19 @@
       menu.style.display = 'block';
   }
   });
-
+  document.addEventListener('DOMContentLoaded', function() {
+    var services = document.querySelectorAll('.service-item');
+    services.forEach(function(service) {
+        service.querySelector('.service-title').addEventListener('click', function() {
+            if (service.classList.contains('active')) {
+                service.classList.remove('active');
+            } else {
+                services.forEach(el => el.classList.remove('active'));
+                service.classList.add('active');
+            }
+        });
+    });
+  });
 </script>
 
 </html>
